@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terror</title>
+</head>
+<style>
+    *,
+    *:before,
+    *:after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        background: black;
+    }
+
+    /*inicio do icone, menu e sua animação.*/ 
+    .menu {
+        background: #fff;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        position: fixed;
+        cursor: pointer;
+    }
+
+    .hamburguer {
+        position: relative;
+        display: block;
+        background: #000;
+        width: 30px;
+        height: 2px;
+        top: 29px;
+        left: 15px;
+        transition: .2s ease-in-out;
+    }
+
+    .hamburguer:before,
+    .hamburguer:after {
+        background: #000;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        transition: .2s ease-in-out;
+    }
+
+    .hamburguer:before {
+        top: -10px;
+    }
+
+    .hamburguer:after {
+        bottom: -10px;
+    }
+
+    input {
+        display: none;
+    }
+
+    input:checked ~ ul{
+        opacity: 1;
+    }
+
+    input:checked ~ label .menu {
+        box-shadow: 0 0 0 30vw #fff, 0 0 0 30vw #fff;
+    }
+
+    input:checked ~ label .hamburguer {
+        transform: rotate(45deg);
+    }
+
+    input:checked ~ label .hamburguer:before {
+        transform: rotate(90deg);
+        top: 0;
+    }
+
+    input:checked ~ label .hamburguer:after {
+        transform: rotate(90deg);
+        bottom: 0;
+    }
+
+    ul {
+        position: absolute;
+        top: 17%;
+        left: 5%;
+        transform: translate(-25%, -25%);
+        list-style: none;
+        opacity: 0;
+        
+    }
+
+    a{
+        display: block;
+        margin-bottom: 5px;
+        color: black;
+        font-size: 30px;
+        text-decoration: none;
+    }
+    /*fim do icone, menu e sua animação. */
+
+    .content{
+    margin-left: 350px;
+    margin-bottom: 40px;
+    max-width: 600px;
+
+  text-align: center;
+}
+
+.content h2{
+    color: #fff;
+    font-size: 2.5em;
+}
+
+.content h2 span{
+    color: #40c3ff;
+    font-size: 1.5em;
+}
+
+.content p{
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 300;
+}
+
+.content a{
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    background: #fff;
+    color: #000;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 500;
+}
+
+</style>
+<body>
+    <input id="menu-hamburguer" type="checkbox">
+
+    <label for="menu-hamburguer">
+        <div class="menu">
+            <span class="hamburguer"></span>
+        </div>
+    </label>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="historia.html">História</a></li>
+        <li><a href="fps.html">Jogos de FPS</a></li>
+        <li><a href="mmorpg.html">Jogos de MMORPG</a></li>
+        <li><a href="terror.html">Jogos de terror</a></li>
+    </ul>
+
+    <div class="content">
+        <h2><br><span>História sobre Layer of Fear:</span></h2>
+        <p>
+        Os quadros e obras de arte que preenchem a maior parte da mansão interagem constantemente com o 
+        personagem, sejam mudando de forma, sejam trazendo uma memória sombria ou até mesmo dando sustos 
+        quando eles parecem ganhar vida. A história do título faz com que o usuário queira jogar cada vez 
+        mais e o cenário sinistro combinado com armadilhas e ilusões criadas pela mente doentia do protagonista
+        fazem de Layers of Fear um ótimo game para entrar na lista.</p>
+        
+    </div>  
+
+</body>
+</html>
